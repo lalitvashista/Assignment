@@ -1,0 +1,55 @@
+:root {
+  --mainFont: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--mainFont);
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 45px;
+}
+
+.s1 {
+  width: 960px;
+  margin: 0 150px;
+}
+
+.nav-wrapper {
+  display: flex;
+  /* width: 1260px; */
+  /* height: 3vh; */
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 20px auto;
+  background-color: hotpink;
+  padding: 50px;
+}
+
+nav {
+  font-weight: bold;
+}
+
+#navigation {
+  display: flex;
+  height: 8vh;
+  justify-content: space-around;
+  align-items: center;
+  width: 700px;
+}
