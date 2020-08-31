@@ -1,7 +1,3 @@
-:root {
-  --mainFont: "Roboto", sans-serif;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +5,7 @@
 }
 
 body {
-  font-family: var(--mainFont);
+  font-family: "DM Sans", sans-serif;
 }
 
 ul li {
@@ -22,34 +18,49 @@ a {
 }
 
 .container {
-  width: 1200px;
-  margin: 0 45px;
+  width: 1260px;
+  margin: 0px 45px;
+  background-image: url(./Images/header_bg01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .s1 {
   width: 960px;
   margin: 0 150px;
+  overflow: ;
+}
+
+#logo {
+  margin-top: 1px;
+  margin-left: -72px;
+  width: 259px;
+  height: 63px;
 }
 
 .nav-wrapper {
   display: flex;
-  /* width: 1260px; */
-  /* height: 3vh; */
+  height: 3vh;
   justify-content: space-around;
-  align-content: center;
-  margin-top: 20px auto;
-  background-color: hotpink;
+  align-items: center;
   padding: 50px;
 }
 
 nav {
   font-weight: bold;
+  font-size: 15px;
 }
 
 #navigation {
   display: flex;
-  height: 8vh;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 700px;
+  width: 558px;
+  position: relative;
+  top: 4px;
+  left: 14px;
+}
+
+#navigation li a {
+  letter-spacing: 1px;
 }
