@@ -20,6 +20,9 @@ a {
 .container {
   width: 1260px;
   margin: 0px 45px;
+}
+
+.nav-head {
   background-image: url(./Images/header_bg01.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,3 +67,15 @@ nav {
 #navigation li a {
   letter-spacing: 1px;
 }
+
+.slider-wrapper {
+  height: 374px;
+  display: grid;
+  grid-template-columns: 630px 1fr;
+}
+.head-img {
+  margin-top: -11px;
+  z-index: -1;
+}
+
+/* #f4f4f4 */
