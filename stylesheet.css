@@ -1,3 +1,9 @@
+:root {
+  --mainBorder: 1px solid #dddddd;
+  --mainColor: #219558;
+  --secondaryColor: #969696;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,12 +20,12 @@ ul li {
 
 a {
   text-decoration: none;
-  color: grey;
 }
 
 .container {
   width: 1260px;
-  margin: 0px 45px;
+  margin: 0px 120px;
+  background-image: url(./Images/main_bg.jpg);
 }
 
 .nav-head {
@@ -66,16 +72,227 @@ nav {
 
 #navigation li a {
   letter-spacing: 1px;
+  color: grey;
 }
 
 .slider-wrapper {
-  height: 374px;
+  height: 376px;
   display: grid;
   grid-template-columns: 630px 1fr;
-}
-.head-img {
-  margin-top: -11px;
-  z-index: -1;
+  border: var(--mainBorder);
 }
 
-/* #f4f4f4 */
+.intro {
+  display: grid;
+  grid-template-rows: 1fr 1fr 83px 36px;
+}
+
+.intro h2 {
+  grid-row: 1 / 2;
+  color: var(--mainColor);
+  font-size: 27px;
+  margin-top: 91px;
+  margin-left: 32px;
+}
+.intro p {
+  grid-row: 2 / 3;
+  font-size: 18px;
+  margin-top: 21px;
+  margin-left: 34px;
+}
+
+.head-btn {
+  grid-row: 3 / 4;
+  position: relative;
+  top: 27px;
+  left: 33px;
+}
+
+.dots-wrapper {
+  display: flex;
+  grid-row: 4 / 5;
+  position: relative;
+  top: 5px;
+  left: 275px;
+}
+.dots-wrapper div {
+  margin: 1.6px;
+  cursor: pointer;
+}
+
+.lifestyle-wrapper {
+  display: grid;
+  grid-template-rows: 52px 23px 307px 24px;
+  grid-template-columns: 308px 321px 298px 1fr;
+
+  margin-top: 20px;
+  border: var(--mainBorder);
+}
+
+.lifestyle-wrapper h3 {
+  margin-top: 24px;
+  margin-left: 30px;
+  color: var(--mainColor);
+  border-bottom: 1px solid var(--mainColor);
+  grid-column: 1/4;
+}
+
+.col-1 {
+  grid-area: 3 / 1 / 4 / 2;
+  font-size: 13px;
+  border-right: 1px solid lightgray;
+}
+.col-1 p {
+  color: var(--secondaryColor);
+  margin-left: 30px;
+}
+.learn-btn {
+  border: 1px solid var(--mainColor);
+  width: 177px;
+  height: 30px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.main-btn {
+  margin-top: 98px;
+  margin-left: 30px;
+}
+.learn-btn div {
+  color: var(--mainColor);
+  font-weight: bold;
+  font-size: 13px;
+  padding: 6px;
+  margin-left: 7px;
+  letter-spacing: 1px;
+}
+
+.learn-btn img {
+  position: relative;
+  left: 51px;
+}
+
+.col-2 {
+  grid-area: 3 / 2 / 4 / 3;
+  display: grid;
+  grid-template-rows: 27px 1fr;
+  border-right: 1px solid lightgray;
+}
+
+.col-2 > h4 {
+  color: var(--secondaryColor);
+  margin-top: -2px;
+  margin-left: 21px;
+}
+
+.col-2-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.connect {
+  display: grid;
+  grid-template-rows: 134px 19px 1fr;
+  border-right: 1px solid lightgray;
+}
+.connect div img {
+  position: relative;
+  top: -8px;
+  left: 12px;
+}
+.connect div h4 {
+  color: var(--mainColor);
+  margin-top: -1px;
+  margin-left: 19px;
+}
+
+.connect div p {
+  color: var(--secondaryColor);
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.experience {
+  display: grid;
+  grid-template-rows: 134px 19px 1fr;
+}
+
+.experience div img {
+  position: relative;
+  top: -8px;
+  left: 12px;
+}
+.experience div h4 {
+  color: var(--mainColor);
+  margin-top: -1px;
+  margin-left: 22px;
+}
+.experience div p {
+  color: var(--secondaryColor);
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.col-3 {
+  grid-area: 3 / 3 / 4 / 4;
+  display: grid;
+  grid-template-rows: 28px 1fr;
+}
+
+.col-3 > h4 {
+  color: var(--secondaryColor);
+  margin-top: -2px;
+  margin-left: 21px;
+}
+.col-3-wrapper {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+}
+
+.discover {
+  display: grid;
+  grid-template-rows: 133px 19px 1fr;
+  border-right: 1px solid lightgray;
+}
+
+.discover div img {
+  position: relative;
+  top: -9px;
+  left: 11px;
+}
+
+.discover div h4 {
+  color: var(--mainColor);
+  margin-top: -1px;
+  margin-left: 20px;
+}
+
+.discover div p {
+  color: var(--secondaryColor);
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.grow {
+  display: grid;
+  grid-template-rows: 133px 19px 1fr;
+}
+
+.grow div img {
+  position: relative;
+  top: -9px;
+  left: 11px;
+}
+
+.grow div h4 {
+  color: var(--mainColor);
+  margin-top: -1px;
+  margin-left: 20px;
+}
+
+.grow div p {
+  color: var(--secondaryColor);
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
