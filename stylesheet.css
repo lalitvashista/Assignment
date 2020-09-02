@@ -21,10 +21,25 @@ ul li {
 a {
   text-decoration: none;
 }
-
+span {
+  color: var(--mainColor);
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--mainColor);
+}
+p {
+  color: var(--secondaryColor);
+  font-size: 13px;
+}
 .container {
   width: 1260px;
-  margin: 0px 120px;
+  margin: 0px 45px;
   background-image: url(./Images/main_bg.jpg);
 }
 
@@ -89,7 +104,6 @@ nav {
 
 .intro h2 {
   grid-row: 1 / 2;
-  color: var(--mainColor);
   font-size: 27px;
   margin-top: 91px;
   margin-left: 32px;
@@ -132,18 +146,15 @@ nav {
 .lifestyle-wrapper h3 {
   margin-top: 24px;
   margin-left: 30px;
-  color: var(--mainColor);
   border-bottom: 1px solid var(--mainColor);
   grid-column: 1/4;
 }
 
 .col-1 {
   grid-area: 3 / 1 / 4 / 2;
-  font-size: 13px;
   border-right: 1px solid lightgray;
 }
 .col-1 p {
-  color: var(--secondaryColor);
   margin-left: 30px;
 }
 .learn-btn {
@@ -154,15 +165,15 @@ nav {
   cursor: pointer;
 }
 .main-btn {
-  margin-top: 98px;
-  margin-left: 30px;
+  margin-top: 106px;
+  margin-left: 31px;
 }
 .learn-btn div {
   color: var(--mainColor);
   font-weight: bold;
   font-size: 13px;
   padding: 6px;
-  margin-left: 7px;
+  margin-left: 8px;
   letter-spacing: 1px;
 }
 
@@ -199,14 +210,11 @@ nav {
   left: 12px;
 }
 .connect div h4 {
-  color: var(--mainColor);
   margin-top: -1px;
   margin-left: 19px;
 }
 
 .connect div p {
-  color: var(--secondaryColor);
-  font-size: 13px;
   margin-top: 10px;
   margin-left: 20px;
 }
@@ -221,13 +229,10 @@ nav {
   left: 12px;
 }
 .experience div h4 {
-  color: var(--mainColor);
   margin-top: -1px;
   margin-left: 22px;
 }
 .experience div p {
-  color: var(--secondaryColor);
-  font-size: 13px;
   margin-top: 10px;
   margin-left: 20px;
 }
@@ -261,14 +266,11 @@ nav {
 }
 
 .discover div h4 {
-  color: var(--mainColor);
   margin-top: -1px;
   margin-left: 20px;
 }
 
 .discover div p {
-  color: var(--secondaryColor);
-  font-size: 13px;
   margin-top: 10px;
   margin-left: 20px;
 }
@@ -285,14 +287,104 @@ nav {
 }
 
 .grow div h4 {
-  color: var(--mainColor);
   margin-top: -1px;
   margin-left: 20px;
 }
 
 .grow div p {
-  color: var(--secondaryColor);
-  font-size: 13px;
   margin-top: 10px;
   margin-left: 20px;
+}
+
+.customer-wrapper {
+  height: 380px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 570px 1fr;
+  grid-gap: 79px;
+}
+
+.cs-intro {
+  display: grid;
+  grid-template-rows: 43px 100px 1fr;
+}
+
+.cs-intro h3 {
+  margin-left: -1px;
+  margin-top: 14px;
+  border-bottom: 1px solid var(--mainColor);
+}
+.cs-intro div p {
+  margin-top: 22px;
+}
+
+.cs-logo {
+  display: grid;
+  grid-template-columns: 172px 188px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.cs-logo-1 {
+  margin-top: -4px;
+  margin-left: -9px;
+}
+.cs-logo-2 {
+  margin-top: -4px;
+  margin-left: 4px;
+}
+.cs-logo-3 {
+  margin-top: -4px;
+  margin-left: 1px;
+}
+.cs-logo-4 {
+  margin-top: -4px;
+  margin-left: -9px;
+}
+.cs-logo-5 {
+  margin-top: -4px;
+  margin-left: 4px;
+}
+.cs-logo-6 {
+  margin-top: -4px;
+  margin-left: 1px;
+}
+
+.news-wrapper {
+  display: grid;
+  grid-template-rows: 44px 175px 1fr;
+}
+
+.news-wrapper h3 {
+  margin-top: 14px;
+  border-bottom: 1px solid var(--mainColor);
+}
+.news-1 {
+  border-bottom: var(--mainBorder);
+}
+.news-1 h5 {
+  margin-top: 21px;
+}
+.date {
+  font-size: 12px;
+  font-weight: bold;
+  color: grey;
+}
+.news-1 p:nth-child(2) {
+  margin-top: 3px;
+  margin-left: 1px;
+}
+.news-1 p:nth-child(3) {
+  margin-top: 14px;
+}
+
+.news-2 h5 {
+  margin-top: 26px;
+}
+
+.news-2 p:nth-child(2) {
+  margin-top: 4px;
+  margin-left: 1px;
+}
+.news-2 p:nth-child(3) {
+  margin-top: 14px;
 }
