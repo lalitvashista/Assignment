@@ -3,7 +3,7 @@
   --mainColor: #219558;
   --secondaryColor: #969696;
 }
-
+/* 328px caption conatiner size */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 ul li {
@@ -51,9 +52,10 @@ p {
 }
 
 .s1 {
+  position: relative;
   width: 960px;
   margin: 0 150px;
-  overflow: ;
+  overflow: hidden;
 }
 
 #logo {
@@ -90,51 +92,143 @@ nav {
   letter-spacing: 1px;
   color: grey;
 }
-
+/*-------slider--------------- */
 .slider-wrapper {
+  position: relative;
+  width: 960px;
   height: 376px;
-  display: grid;
-  grid-template-columns: 630px 1fr;
+}
+
+.s1 .slide {
+  position: absolute;
+  width: 960px;
+  height: 376px;
+  background-size: cover;
+  z-index: 1;
+  display: none;
+  justify-content: flex-end;
+  animation: slide 2s ease;
+}
+.s1 .active {
+  display: flex;
   border: var(--mainBorder);
 }
-
-.intro {
-  display: grid;
-  grid-template-rows: 1fr 1fr 83px 36px;
+@keyframes slide {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.caption-wrapper {
+  max-width: 328px;
+  flex-grow: 1;
+}
+.s1 .caption {
+  max-width: 328px;
+  height: 376px;
+}
+.s1 .caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s1 .active .caption h2 {
+  opacity: 0;
+  animation: captionText 0.5s ease forwards 1s;
+}
+.cap-1 h2 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-top: 93px;
+  margin-left: -5px;
 }
 
-.intro h2 {
-  grid-row: 1 / 2;
-  font-size: 27px;
-  margin-top: 91px;
-  margin-left: 32px;
+.cap-2 h2 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-top: 63px;
+  margin-left: -34px;
 }
-.intro p {
-  grid-row: 2 / 3;
+
+.cap-1 p {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-left: -33px;
+}
+.cap-2 p {
   font-size: 18px;
   margin-top: 21px;
-  margin-left: 34px;
 }
-
-.head-btn {
-  grid-row: 3 / 4;
-  position: relative;
-  top: 27px;
-  left: 33px;
+.s1 .active .caption p {
+  opacity: 0;
+  animation: captionText 0.5s ease forwards 1.2s;
 }
-
-.dots-wrapper {
+.cap-1 a {
+  margin-top: 87px;
+  margin-left: -83px;
+}
+.cap-2 a {
+  margin-top: 39px;
+  margin-left: -81px;
+}
+.s1 .active .caption a {
+  opacity: 0;
+  animation: captionText 0.5s ease forwards 1.4s;
+}
+@keyframes captionText {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.s1 .dots-wrapper {
   display: flex;
-  grid-row: 4 / 5;
   position: relative;
-  top: 5px;
-  left: 275px;
+  top: 351px;
+  left: 906px;
+  z-index: 2;
 }
-.dots-wrapper div {
+.s1 .dots-wrapper .dot {
+  height: 12px;
+  width: 12px;
   margin: 1.6px;
   cursor: pointer;
+  background-color: lightgray;
+  border: var(--mainBorder);
+  border-radius: 50%;
 }
-
+.s1 .dots-wrapper div:hover {
+  transform: scale(1.1);
+  background-color: white;
+}
+.active-dot {
+  background-color: #ffffff;
+}
+.s1 .indicator {
+  position: absolute;
+  bottom: 7px;
+  right: 24px;
+  z-index: 2;
+}
+.s1 .indicator div {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #dddddd;
+  border-radius: 50%;
+  margin: 0 2.2px;
+  cursor: pointer;
+}
+.s1 .indicator div.active {
+  background-color: #ffffff;
+}
+/*-------slider--------------- */
 .lifestyle-wrapper {
   display: grid;
   grid-template-rows: 52px 23px 307px 24px;
@@ -164,19 +258,25 @@ nav {
   height: 30px;
   background-color: #ffffff;
   cursor: pointer;
+
+  color: var(--mainColor);
+  font-weight: bold;
+  font-size: 13px;
+  padding: 6px 0px 0px 13px;
+  letter-spacing: 1px;
 }
 .main-btn {
   margin-top: 72px;
   margin-left: 30px;
 }
-.learn-btn div {
+/* .learn-btn {
   color: var(--mainColor);
   font-weight: bold;
   font-size: 13px;
   padding: 6px;
   margin-left: 8px;
   letter-spacing: 1px;
-}
+} */
 
 .learn-btn img {
   position: relative;
