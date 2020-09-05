@@ -218,7 +218,7 @@
               <h3>MEDIA RESOURCES - PHOTOS</h3>
               <div class="photos-wrapper">
                 <div class="photo-1">
-                  <img src="./Images/photo-thumbnail.png" alt="" />
+                  <img src="http://Source.unsplash.com/183x118?nature" alt="" />
                 </div>
                 <div class="photo-2">
                   <img src="./Images/photo-thumbnail.png" alt="" />
@@ -276,6 +276,26 @@
       </footer>
     </div>
 
+    <!----------lightbox----------------->
+    <div class="lightbox">
+      <div class="lightbox-content">
+        <div class="lightbox-close" onclick="lightBox()">
+          <img src="./Images/close.png" alt="" />
+        </div>
+        <div class="lightbox-caption">THE TITLE FOR THE IMAGE WILL GO HERE</div>
+        <img src="" class="lightbox-img" alt="" onclick="next()" />
+      </div>
+      <div class="lightbox-controls">
+        <div class="prev" onclick="prev()">
+          <img src="./Images/prev.png" alt="" />
+        </div>
+        <div class="next" onclick="next()">
+          <img src="./Images/next.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!----------lightbox----------------->
     <script src="./app.js"></script>
   </body>
 </html>
