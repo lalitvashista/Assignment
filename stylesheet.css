@@ -3,7 +3,7 @@
   --mainColor: #219558;
   --secondaryColor: #969696;
 }
-/* 328px caption conatiner size */
+
 * {
   margin: 0;
   padding: 0;
@@ -64,7 +64,7 @@ p {
   width: 259px;
   height: 63px;
 }
-
+/*-------------------------------nav bar-------------------------------------------*/
 .nav-wrapper {
   display: flex;
   height: 3vh;
@@ -92,7 +92,9 @@ nav {
   letter-spacing: 1px;
   color: grey;
 }
-/*-------slider--------------- */
+/*-------------------------------nav bar-------------------------------------------*/
+
+/*-----------------------------------------slider------------------------------------- */
 .slider-wrapper {
   position: relative;
   width: 960px;
@@ -228,7 +230,9 @@ nav {
 .s1 .indicator div.active {
   background-color: #ffffff;
 }
-/*-------slider--------------- */
+/*-----------------------------------------slider------------------------------------- */
+
+/*------------------------------------------main-1--------------------------------------*/
 .lifestyle-wrapper {
   display: grid;
   grid-template-rows: 52px 23px 307px 24px;
@@ -269,14 +273,6 @@ nav {
   margin-top: 72px;
   margin-left: 30px;
 }
-/* .learn-btn {
-  color: var(--mainColor);
-  font-weight: bold;
-  font-size: 13px;
-  padding: 6px;
-  margin-left: 8px;
-  letter-spacing: 1px;
-} */
 
 .learn-btn img {
   position: relative;
@@ -396,7 +392,9 @@ nav {
   margin-top: 10px;
   margin-left: 20px;
 }
+/*------------------------------------------main-1--------------------------------------*/
 
+/*------------------------------------------main-2--------------------------------------*/
 .customer-wrapper {
   height: 380px;
   margin-top: 20px;
@@ -489,7 +487,9 @@ nav {
 .news-2 p:nth-child(3) {
   margin-top: 14px;
 }
+/*------------------------------------------main-2--------------------------------------*/
 
+/*------------------------------------------main-3--------------------------------------*/
 .media-wrapper {
   height: 409px;
   margin-top: 31px;
@@ -583,7 +583,8 @@ nav {
   margin-top: 3px;
   margin-left: 1px;
 }
-
+/*------------------------------------------main-3--------------------------------------*/
+/*------------------------------------------footer--------------------------------------*/
 footer {
   background-image: url(./Images/footer_bg.jpg);
   background-repeat: no-repeat;
@@ -610,7 +611,9 @@ footer p {
   margin-top: 19px;
   margin-left: 36px;
 }
+/*------------------------------------------footer--------------------------------------*/
 
+/*-----------------------------------------light box--------------------------------*/
 .lightbox {
   position: fixed;
   left: 0;
@@ -623,7 +626,22 @@ footer p {
   justify-content: center;
   align-items: center;
 }
+.lightboxvd {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
 .lightbox.open {
+  display: flex;
+}
+.lightboxvd.open {
   display: flex;
 }
 .lightbox .lightbox-img {
@@ -643,8 +661,21 @@ footer p {
     transform: scale(1);
   }
 }
+.lightboxvd .lightboxvd-video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 500px;
+  padding: 12px;
+  cursor: pointer;
+  animation: lightbImage 0.5s ease;
+}
 
 .lightbox .lightbox-content {
+  position: relative;
+  background-color: #ffffff;
+}
+.lightboxvd .lightbox-content {
   position: relative;
   background-color: #ffffff;
 }
@@ -654,7 +685,12 @@ footer p {
   right: -13px;
   cursor: pointer;
 }
-
+.lightboxvd .lightbox-close {
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  cursor: pointer;
+}
 .lightbox .lightbox-caption {
   color: var(--mainColor);
   font-size: 16px;
@@ -662,7 +698,20 @@ footer p {
   margin-top: 8px;
   margin-left: 10px;
 }
+.lightboxvd .lightboxvd-caption {
+  color: var(--mainColor);
+  font-size: 16px;
+  width: 100%;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
 .lightbox .lightbox-controls div {
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+}
+.lightboxvd .lightbox-controls div {
   position: absolute;
   top: 45%;
   cursor: pointer;
@@ -670,6 +719,12 @@ footer p {
 .lightbox .lightbox-controls div.prev {
   left: 245px;
 }
+.lightboxvd .lightbox-controls div.prev {
+  left: 245px;
+}
 .lightbox .lightbox-controls div.next {
+  right: 245px;
+}
+.lightboxvd .lightbox-controls div.next {
   right: 245px;
 }

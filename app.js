@@ -1,3 +1,4 @@
+/*-------------------------------------slider------------------------------------ */
 const slides = document.querySelector(".slider-wrapper").children;
 const indicator = document.querySelector(".indicator");
 let slideIndex = 0;
@@ -57,35 +58,36 @@ function autoPlay() {
 
 let timer = setInterval(autoPlay, 5000);
 
-/*------------Pop up-------------------- */
+/*---------------------------------------Pop up Image-------------------- */
 const photoGallery = document.querySelector(".photos-wrapper").children;
 const lightBoxContainer = document.querySelector(".lightbox");
 const lightBoxImage = document.querySelector(".lightbox-img");
+const lightBoxText = document.querySelector(".lightbox-caption");
 let imgSrc;
-let index;
+let photoIndex;
 
 for (let j = 0; j < photoGallery.length; j++) {
   photoGallery[j].addEventListener("click", function () {
-    index = j;
+    photoIndex = j;
     lightBox();
     changeImage();
   });
 }
 
 function next() {
-  if (index == photoGallery.length - 1) {
-    index = 0;
+  if (photoIndex == photoGallery.length - 1) {
+    photoIndex = 0;
   } else {
-    index++;
+    photoIndex++;
   }
   changeImage();
 }
 
 function prev() {
-  if (index == 0) {
-    index == photoGallery.length - 1;
+  if (photoIndex == 0) {
+    photoIndex == photoGallery.length - 1;
   } else {
-    index--;
+    photoIndex--;
   }
   changeImage();
 }
@@ -94,8 +96,50 @@ function lightBox() {
   lightBoxContainer.classList.toggle("open");
 }
 function changeImage() {
-  imgSrc = photoGallery[index].querySelector("img").getAttribute("src");
+  imgSrc = photoGallery[photoIndex].querySelector("img").getAttribute("src");
   lightBoxImage.src = imgSrc;
+  lightBoxText.innerHTML = photoGallery[photoIndex].querySelector("img").title;
 }
 
-/*------------Pop up-------------------- */
+/*----------------------------------Pop up video-------------------- */
+const videoGallery = document.querySelector(".videos-wrapper").children;
+const lightBoxContainerVd = document.querySelector(".lightboxvd");
+const lightBoxVideo = document.querySelector(".lightboxvd-video");
+const lightBoxVdText = document.querySelector(".lightboxvd-caption");
+let videoSrc;
+let Index;
+
+for (let k = 0; k < videoGallery.length; k++) {
+  videoGallery[k].addEventListener("click", function () {
+    Index = k;
+    lightBoxVd();
+    changeVideo();
+  });
+}
+
+function nextVd() {
+  if (Index == videoGallery.length - 1) {
+    Index = 0;
+  } else {
+    Index++;
+  }
+  changeVideo();
+}
+
+function prevVd() {
+  if (Index == 0) {
+    Index == videoGallery.length - 1;
+  } else {
+    Index--;
+  }
+  changeVideo();
+}
+function lightBoxVd() {
+  lightBoxContainerVd.classList.toggle("open");
+}
+
+function changeVideo() {
+  videoSrc = videoGallery[Index].querySelector("video").getAttribute("src");
+  lightBoxVideo.src = videoSrc;
+  lightBoxVdText.innerHTML = videoGallery[Index].querySelector("video").title;
+}
